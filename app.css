@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6C0345;
+}
+.container{
+    width: 400px;
+    padding: 1.125rem;
+    border-radius: 5px;
+    background-color: #DC6B19;
+    box-shadow: 0px 0px 4px 2px #F7C566;
+}
+h1{
+    font-size: 1.625rem;
+    margin-bottom: 1.125rem;
+    color: #F7C566;
+    text-shadow: 1px 2px 3px #000;
+    position: relative;
+}
+h1::after{
+    content: '';
+    width: 50%;
+    position: absolute;
+    bottom: -8px;
+    height: 2px;
+    background-color: #6C0345;
+    left: 0;
+}
+p{
+    font-size: 1rem;
+    color: #F7C566;
+    font-weight: 600;
+}
+.form{
+    width: 100%;
+    border: 1px solid #F7C566;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1.125rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form :where(input, button){
+    flex: 1;
+    border: 2px solid #6C0345;
+    border-radius: 5px;
+    padding: 0.625rem;
+    outline: none;
+    background: transparent;
+}
+.form button{
+    background-color: #6C0345;
+    color: #fff;
+    cursor: pointer;
+}
+.form button.generate{
+    pointer-events: none;
+    opacity: 0.7;
+}
+.qr-code{
+    pointer-events: none;
+    width: 100%;
+    border: 1px solid #F7C566;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1.125rem 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;   
+    transition: display 0.3s ease-in;
+}
+.qr-code.active{
+    display: flex;
+    pointer-events: all;
+}
+.qr-code button{
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #6C0345;
+    color: #fff;
+    cursor: pointer;
+}
+.qr-code i{
+    margin-right: 1rem;
+}
